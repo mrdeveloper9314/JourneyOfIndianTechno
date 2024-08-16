@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Technologies - Journey of Indian Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            z-index: 10;
+        }
+
+        .sidebar:hover {
+            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 1rem;
+            font-size: 1rem;
+            color: #2b6cb0;
+            transition: background 0.3s, color 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #e2e8f0;
+            color: #2b6cb0;
+            border-left: 4px solid #2b6cb0;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-200 text-gray-800">
+    <header class="bg-indigo-900 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-yellow-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-yellow-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-yellow-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-yellow-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 flex flex-col lg:flex-row gap-10">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/4 sidebar p-6 rounded-lg">
+            <h2 class="text-2xl font-semibold mb-4 sticky top-0 bg-white py-2">Present Technologies</h2>
+            <ul class="space-y-2">
+                <li><a href="#introduction" class="hover:text-blue-700">Introduction</a></li>
+                <li><a href="#information-tech" class="hover:text-blue-700">Information Technology</a></li>
+                <li><a href="#telecommunications" class="hover:text-blue-700">Telecommunications</a></li>
+                <li><a href="#space-tech" class="hover:text-blue-700">Space Technology</a></li>
+                <li><a href="#renewable-energy" class="hover:text-blue-700">Renewable Energy</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="w-full lg:w-3/4 bg-white p-6 rounded-lg shadow-md">
+            <h1 class="text-4xl font-bold mb-6">Present Indian Technology</h1>
+            <p class="mb-6 text-lg">India has emerged as a global leader in various technological fields in the present era. This page explores the major advancements in Information Technology, Telecommunications, Space Technology, and Renewable Energy.</p>
+
+            <div id="introduction" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Introduction</h2>
+                <p class="text-lg mb-4">India has made remarkable progress in various technological domains, significantly impacting the global stage. This section provides an overview of India's current technological landscape.</p>
+            </div>
+
+            <div id="information-tech" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Information Technology</h2>
+                <p class="text-lg mb-4">India is renowned for its IT industry, with major companies like TCS, Infosys, and Wipro leading global software and services. The country has become a hub for software development, outsourcing, and tech innovation.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/TCS_SIPCOT_Building.jpg" class="w-full rounded-lg shadow-lg mb-4">
+            </div>
+
+            <div id="telecommunications" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Telecommunications</h2>
+                <p class="text-lg mb-4">The telecommunications sector in India has seen tremendous growth, with advancements in 4G and the rollout of 5G technology. Companies like Jio and Airtel have revolutionized mobile communication and internet access.</p>
+                <img src="https://www.livelaw.in/h-upload/images/1500x900_mobile-tower-ll-size-min.jpg" alt="Jio Mobile Tower" class="w-full rounded-lg shadow-lg mb-4">
+            </div>
+
+            <div id="space-tech" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Space Technology</h2>
+                <p class="text-lg mb-4">India's space agency, ISRO, has achieved remarkable milestones with missions like Mars Orbiter Mission (Mangalyaan) and Chandrayaan. These successes have placed India among the leading space exploration countries.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/ISRO_Satellite_Launch.jpg/1200px-ISRO_Satellite_Launch.jpg" alt="ISRO Satellite Launch" class="w-full rounded-lg shadow-lg mb-4">
+            </div>
+
+            <div id="renewable-energy" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Renewable Energy</h2>
+                <p class="text-lg mb-4">India is making strides in renewable energy with significant investments in solar and wind power. The country aims to increase its renewable energy capacity to address climate change and promote sustainable development.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Solar_Panel_Farm_India.jpg/1200px-Solar_Panel_Farm_India.jpg" alt="Solar Panel Farm" class="w-full rounded-lg shadow-lg mb-4">
+            </div>
+
+            <div class="image-gallery grid grid-cols-2 gap-4 mt-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Solar_Panel_India.jpg/1024px-Solar_Panel_India.jpg" alt="Solar Panel India" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/5G_Tower_India.jpg/1024px-5G_Tower_India.jpg" alt="5G Tower India" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ISRO_Rocket_2.jpg/1024px-ISRO_Rocket_2.jpg" alt="ISRO Rocket" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Infosys_Headquarters.jpg/1024px-Infosys_Headquarters.jpg" alt="Infosys Headquarters" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-indigo-900 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Journey of Indian Technology</h3>
+            <p class="text-lg">Explore the technological marvels of India and their impact on the world.</p>
+            <ul class="flex justify-center space-x-6 mt-4">
+                <li><a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <p class="mt-6">&copy; 2024 Journey of Indian Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

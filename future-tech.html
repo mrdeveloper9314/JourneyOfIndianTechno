@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Technologies - Journey of Indian Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 300% 300%;
+            animation: gradientBG 10s ease infinite;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .hero-text {
+            font-size: 4rem;
+            line-height: 1.2;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-top: 10%;
+            margin-bottom: 2%;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        .sticky-sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            z-index: 10;
+        }
+
+        .sticky-sidebar a {
+            display: block;
+            padding: 1rem;
+            font-size: 1rem;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .sticky-sidebar a:hover,
+        .sticky-sidebar a.active {
+            background-color: #f3f4f6;
+            color: #1a202c;
+            border-left: 4px solid #1a202c;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-blue-900 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-300 transition-colors duration-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300 transition-colors duration-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-yellow-300 transition-colors duration-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 flex flex-col lg:flex-row gap-10">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/4 sticky-sidebar">
+            <h2 class="text-2xl font-semibold mb-4">Future Technologies</h2>
+            <ul class="space-y-2">
+                <li><a href="#introduction" class="hover:text-yellow-300">Introduction</a></li>
+                <li><a href="#information-technology" class="hover:text-yellow-300">Information Technology</a></li>
+                <li><a href="#telecommunications" class="hover:text-yellow-300">Telecommunications</a></li>
+                <li><a href="#space-technology" class="hover:text-yellow-300">Space Technology</a></li>
+                <li><a href="#renewable-energy" class="hover:text-yellow-300">Renewable Energy</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="w-full lg:w-3/4">
+            <h1 class="hero-text animate__animated animate__fadeIn animate__delay-1s">Welcome to Journey of Future Technologies</h1>
+
+            <div id="introduction" class="section">
+                <h2 class="text-3xl font-semibold mb-4">Introduction</h2>
+                <p class="text-lg mb-4">Explore the exciting advancements that are shaping the future of technology. From AI to renewable energy, discover how these innovations are transforming our world.</p>
+            </div>
+
+            <div id="information-technology" class="section">
+                <h2 class="text-3xl font-semibold mb-4">Information Technology</h2>
+                <p class="text-lg mb-4">Information Technology is revolutionizing industries through data management, cybersecurity, and innovative applications. Learn about the cutting-edge solutions driving this field.</p>
+                <img src="https://example.com/it.jpg" alt="Information Technology">
+            </div>
+
+            <div id="telecommunications" class="section">
+                <h2 class="text-3xl font-semibold mb-4">Telecommunications</h2>
+                <p class="text-lg mb-4">Advancements in telecommunications are connecting the world like never before. Explore the technologies making global communication faster and more reliable.</p>
+                <img src="https://example.com/telecom.jpg" alt="Telecommunications">
+            </div>
+
+            <div id="space-technology" class="section">
+                <h2 class="text-3xl font-semibold mb-4">Space Technology</h2>
+                <p class="text-lg mb-4">Space technology is pushing the boundaries of exploration and innovation. Discover the breakthroughs that are expanding our understanding of the cosmos.</p>
+                <img src="https://example.com/space.jpg" alt="Space Technology">
+            </div>
+
+            <div id="renewable-energy" class="section">
+                <h2 class="text-3xl font-semibold mb-4">Renewable Energy</h2>
+                <p class="text-lg mb-4">Renewable energy sources are key to a sustainable future. Learn about the advancements in solar, wind, and other renewable technologies that are powering our planet.</p>
+                <img src="https://example.com/renewable.jpg" alt="Renewable Energy">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Journey of Indian Technology</h3>
+            <p class="text-lg">Explore the technological marvels of the past, present, and future.</p>
+            <ul class="flex justify-center space-x-6 mt-4">
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <p class="mt-6">&copy; 2024 Journey of Indian Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroText = document.querySelector('.hero-text');
+            const heroTextContent = heroText.textContent;
+            heroText.innerHTML = heroTextContent.split('').map((char, index) => `<span style="animation-delay:${index * 0.1}s">${char}</span>`).join('');
+        });
+    </script>
+</body>
+</html>

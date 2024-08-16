@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Technology - Journey of Indian Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-scale {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+            z-index: 10;
+        }
+
+        .sidebar:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: #2b6cb0;
+            transition: background 0.3s, color 0.3s, border-left 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #f7fafc;
+            color: #2b6cb0;
+            border-left: 4px solid #2b6cb0;
+        }
+
+        .image-gallery img {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .section {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1.5rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+            opacity: 0.1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .section:hover::before {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-green-50 via-green-100 to-green-200 text-gray-800">
+    <header class="bg-green-900 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold hover:text-yellow-300 transition-colors duration-300">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-300 transition-colors duration-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-yellow-300 transition-colors duration-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300 transition-colors duration-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-yellow-300 transition-colors duration-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 flex flex-col lg:flex-row gap-10">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/4 sidebar">
+            <h2 class="text-2xl font-semibold mb-4 px-4 py-2 border-b-2 border-green-500">Medieval Technology</h2>
+            <ul class="space-y-2">
+                <li><a href="#introduction" class="hover:text-green-700">Introduction</a></li>
+                <li><a href="#astronomy" class="hover:text-green-700">Astronomy</a></li>
+                <li><a href="#medicine" class="hover:text-green-700">Medicine</a></li>
+                <li><a href="#textiles" class="hover:text-green-700">Textiles</a></li>
+                <li><a href="#notable-figures" class="hover:text-green-700">Notable Figures</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="w-full lg:w-3/4">
+            <div class="section mb-10">
+                <h1 class="text-4xl font-bold mb-6">Medieval Indian Technology</h1>
+                <p class="mb-6 text-lg">During the medieval period, India made significant advances in various fields, including astronomy, medicine, and textiles. These innovations had a profound impact on global trade and knowledge.</p>
+            </div>
+
+            <div id="astronomy" class="section mb-10">
+                <h2 class="text-3xl font-semibold mb-4">Astronomy</h2>
+                <p class="text-lg mb-4">Indian astronomers like Aryabhata and Bhaskara II made groundbreaking contributions to our understanding of the cosmos, including precise calculations of the solar year and the motions of planets.</p>
+            </div>
+
+            <div id="medicine" class="section mb-10">
+                <h2 class="text-3xl font-semibold mb-4">Medicine</h2>
+                <p class="text-lg mb-4">India's medical texts, such as the Sushruta Samhita, were unparalleled in their detail and accuracy. Medieval Indian surgeons performed complex procedures like cataract surgery with remarkable skill.</p>
+            </div>
+
+            <div class="image-gallery grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/CharakaSamhita.jpg/1200px-CharakaSamhita.jpg" alt="Ancient Medicine Text" class="hover-scale rounded-lg shadow-lg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kerala_murals_-_depicting_the_ancient_science_of_astrology_and_astronomy.jpg/1024px-Kerala_murals_-_depicting_the_ancient_science_of_astrology_and_astronomy.jpg" alt="Astronomy Murals" class="hover-scale rounded-lg shadow-lg">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-green-900 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Journey of Indian Technology</h3>
+            <p class="text-lg mb-4">Explore the technological marvels of medieval India and their impact on the world.</p>
+            <ul class="flex justify-center space-x-6 mt-4">
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-yellow-300 transition-colors duration-300"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <p class="mt-6">&copy; 2024 Journey of Indian Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

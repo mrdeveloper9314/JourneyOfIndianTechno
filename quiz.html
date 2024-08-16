@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Journey of Indian Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 8px;
+        }
+        .modal-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .modal-close:hover,
+        .modal-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .question-container {
+            margin-bottom: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .multi-choice-container {
+            margin-bottom: 20px;
+        }
+        .multi-choice-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-900 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-yellow-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-yellow-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-yellow-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-yellow-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 px-4">
+        <h1 class="text-3xl font-bold mb-6">Quiz: Journey of Indian Technology</h1>
+        <form id="quiz-form">
+            <!-- Multiple Choice Questions -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Multiple Choice Questions</h2>
+                <!-- Question 1 -->
+                <div class="question-container">
+                    <p class="font-semibold">1. Who is known as the father of Indian astronomy?</p>
+                    <div>
+                        <input type="radio" name="q1" value="A" id="q1a">
+                        <label for="q1a">A. Aryabhata</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" value="B" id="q1b">
+                        <label for="q1b">B. Bhaskara I</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" value="C" id="q1c">
+                        <label for="q1c">C. Brahmagupta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" value="D" id="q1d">
+                        <label for="q1d">D. Varahamihira</label>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="question-container">
+                    <p class="font-semibold">2. Which Indian text is considered an important work on mathematics and astronomy?</p>
+                    <div>
+                        <input type="radio" name="q2" value="A" id="q2a">
+                        <label for="q2a">A. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" value="B" id="q2b">
+                        <label for="q2b">B. Sushruta Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" value="C" id="q2c">
+                        <label for="q2c">C. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" value="D" id="q2d">
+                        <label for="q2d">D. Manusmriti</label>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="question-container">
+                    <p class="font-semibold">3. Which Indian mathematician is known for his work in algebra?</p>
+                    <div>
+                        <input type="radio" name="q3" value="A" id="q3a">
+                        <label for="q3a">A. Bhaskara II</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" value="B" id="q3b">
+                        <label for="q3b">B. Brahmagupta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" value="C" id="q3c">
+                        <label for="q3c">C. Aryabhata</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" value="D" id="q3d">
+                        <label for="q3d">D. Varahamihira</label>
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="question-container">
+                    <p class="font-semibold">4. Which of the following is a significant work on medicine?</p>
+                    <div>
+                        <input type="radio" name="q4" value="A" id="q4a">
+                        <label for="q4a">A. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" value="B" id="q4b">
+                        <label for="q4b">B. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" value="C" id="q4c">
+                        <label for="q4c">C. Manusmriti</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" value="D" id="q4d">
+                        <label for="q4d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+                <!-- Question 5 -->
+                <div class="question-container">
+                    <p class="font-semibold">5. What is the main focus of the Sushruta Samhita?</p>
+                    <div>
+                        <input type="radio" name="q5" value="A" id="q5a">
+                        <label for="q5a">A. Astronomy</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" value="B" id="q5b">
+                        <label for="q5b">B. Medicine</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" value="C" id="q5c">
+                        <label for="q5c">C. Mathematics</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" value="D" id="q5d">
+                        <label for="q5d">D. Textiles</label>
+                    </div>
+                </div>
+                <!-- Question 6 -->
+                <div class="question-container">
+                    <p class="font-semibold">6. Which Indian text includes important work on metallurgy?</p>
+                    <div>
+                        <input type="radio" name="q6" value="A" id="q6a">
+                        <label for="q6a">A. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q6" value="B" id="q6b">
+                        <label for="q6b">B. Sushruta Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q6" value="C" id="q6c">
+                        <label for="q6c">C. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q6" value="D" id="q6d">
+                        <label for="q6d">D. Rasaratna Samuccaya</label>
+                    </div>
+                </div>
+                <!-- Question 7 -->
+                <div class="question-container">
+                    <p class="font-semibold">7. Which historical figure is known for their work in Indian algebra?</p>
+                    <div>
+                        <input type="radio" name="q7" value="A" id="q7a">
+                        <label for="q7a">A. Bhaskara I</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q7" value="B" id="q7b">
+                        <label for="q7b">B. Aryabhata</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q7" value="C" id="q7c">
+                        <label for="q7c">C. Brahmagupta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q7" value="D" id="q7d">
+                        <label for="q7d">D. Varahamihira</label>
+                    </div>
+                </div>
+                <!-- Question 8 -->
+                <div class="question-container">
+                    <p class="font-semibold">8. In which work did Aryabhata describe the concept of zero?</p>
+                    <div>
+                        <input type="radio" name="q8" value="A" id="q8a">
+                        <label for="q8a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q8" value="B" id="q8b">
+                        <label for="q8b">B. Sushruta Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q8" value="C" id="q8c">
+                        <label for="q8c">C. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q8" value="D" id="q8d">
+                        <label for="q8d">D. Manusmriti</label>
+                    </div>
+                </div>
+                <!-- Question 9 -->
+                <div class="question-container">
+                    <p class="font-semibold">9. What was the primary focus of Brahmagupta's work?</p>
+                    <div>
+                        <input type="radio" name="q9" value="A" id="q9a">
+                        <label for="q9a">A. Medicine</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q9" value="B" id="q9b">
+                        <label for="q9b">B. Astronomy</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q9" value="C" id="q9c">
+                        <label for="q9c">C. Mathematics</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q9" value="D" id="q9d">
+                        <label for="q9d">D. Textiles</label>
+                    </div>
+                </div>
+                <!-- Question 10 -->
+                <div class="question-container">
+                    <p class="font-semibold">10. Which text describes surgical techniques in ancient India?</p>
+                    <div>
+                        <input type="radio" name="q10" value="A" id="q10a">
+                        <label for="q10a">A. Sushruta Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q10" value="B" id="q10b">
+                        <label for="q10b">B. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q10" value="C" id="q10c">
+                        <label for="q10c">C. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q10" value="D" id="q10d">
+                        <label for="q10d">D. Manusmriti</label>
+                    </div>
+                </div>
+                <!-- Question 11 -->
+                <div class="question-container">
+                    <p class="font-semibold">11. Which work of mathematics includes the famous “Brahmagupta’s Theorem”?</p>
+                    <div>
+                        <input type="radio" name="q11" value="A" id="q11a">
+                        <label for="q11a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q11" value="B" id="q11b">
+                        <label for="q11b">B. Brahmasphutasiddhanta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q11" value="C" id="q11c">
+                        <label for="q11c">C. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q11" value="D" id="q11d">
+                        <label for="q11d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+                <!-- Question 12 -->
+                <div class="question-container">
+                    <p class="font-semibold">12. What significant concept was introduced by the mathematician Bhaskara II?</p>
+                    <div>
+                        <input type="radio" name="q12" value="A" id="q12a">
+                        <label for="q12a">A. Calculus</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q12" value="B" id="q12b">
+                        <label for="q12b">B. Algebraic Identities</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q12" value="C" id="q12c">
+                        <label for="q12c">C. Geometry</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q12" value="D" id="q12d">
+                        <label for="q12d">D. Astronomy</label>
+                    </div>
+                </div>
+                <!-- Question 13 -->
+                <div class="question-container">
+                    <p class="font-semibold">13. The concept of “Sine” was developed in which work?</p>
+                    <div>
+                        <input type="radio" name="q13" value="A" id="q13a">
+                        <label for="q13a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q13" value="B" id="q13b">
+                        <label for="q13b">B. Brahmasphutasiddhanta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q13" value="C" id="q13c">
+                        <label for="q13c">C. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q13" value="D" id="q13d">
+                        <label for="q13d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+                <!-- Question 14 -->
+                <div class="question-container">
+                    <p class="font-semibold">14. Who wrote the “Rashtriya Swayamsevak Sangh” which is a treatise on astronomy?</p>
+                    <div>
+                        <input type="radio" name="q14" value="A" id="q14a">
+                        <label for="q14a">A. Aryabhata</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q14" value="B" id="q14b">
+                        <label for="q14b">B. Brahmagupta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q14" value="C" id="q14c">
+                        <label for="q14c">C. Bhaskara II</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q14" value="D" id="q14d">
+                        <label for="q14d">D. Varahamihira</label>
+                    </div>
+                </div>
+                <!-- Question 15 -->
+                <div class="question-container">
+                    <p class="font-semibold">15. Which of the following describes the “Decimal System” introduced in ancient India?</p>
+                    <div>
+                        <input type="radio" name="q15" value="A" id="q15a">
+                        <label for="q15a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q15" value="B" id="q15b">
+                        <label for="q15b">B. Brahmasphutasiddhanta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q15" value="C" id="q15c">
+                        <label for="q15c">C. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q15" value="D" id="q15d">
+                        <label for="q15d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multiple Choice (Select Multiple) Questions -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Select Multiple Options</h2>
+                <!-- Question 1 -->
+                <div class="multi-choice-container">
+                    <p class="font-semibold">1. Which of the following are Indian texts on mathematics?</p>
+                    <div>
+                        <input type="checkbox" name="mcq1" value="A" id="mcq1a">
+                        <label for="mcq1a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq1" value="B" id="mcq1b">
+                        <label for="mcq1b">B. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq1" value="C" id="mcq1c">
+                        <label for="mcq1c">C. Brahmasphutasiddhanta</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq1" value="D" id="mcq1d">
+                        <label for="mcq1d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="multi-choice-container">
+                    <p class="font-semibold">2. Which concepts were introduced by Indian mathematicians?</p>
+                    <div>
+                        <input type="checkbox" name="mcq2" value="A" id="mcq2a">
+                        <label for="mcq2a">A. Zero</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq2" value="B" id="mcq2b">
+                        <label for="mcq2b">B. Calculus</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq2" value="C" id="mcq2c">
+                        <label for="mcq2c">C. Algebra</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq2" value="D" id="mcq2d">
+                        <label for="mcq2d">D. Sine</label>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="multi-choice-container">
+                    <p class="font-semibold">3. Which of the following are significant achievements in ancient Indian technology?</p>
+                    <div>
+                        <input type="checkbox" name="mcq3" value="A" id="mcq3a">
+                        <label for="mcq3a">A. Iron Pillar of Delhi</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq3" value="B" id="mcq3b">
+                        <label for="mcq3b">B. Advanced surgical techniques</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq3" value="C" id="mcq3c">
+                        <label for="mcq3c">C. Calculus algorithms</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq3" value="D" id="mcq3d">
+                        <label for="mcq3d">D. Surgical tools</label>
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="multi-choice-container">
+                    <p class="font-semibold">4. Which Indian texts are primarily focused on astronomy?</p>
+                    <div>
+                        <input type="checkbox" name="mcq4" value="A" id="mcq4a">
+                        <label for="mcq4a">A. Aryabhatiya</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq4" value="B" id="mcq4b">
+                        <label for="mcq4b">B. Charaka Samhita</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq4" value="C" id="mcq4c">
+                        <label for="mcq4c">C. Brahmasphutasiddhanta</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq4" value="D" id="mcq4d">
+                        <label for="mcq4d">D. Sushruta Samhita</label>
+                    </div>
+                </div>
+                <!-- Question 5 -->
+                <div class="multi-choice-container">
+                    <p class="font-semibold">5. Which Indian mathematicians contributed to algebra?</p>
+                    <div>
+                        <input type="checkbox" name="mcq5" value="A" id="mcq5a">
+                        <label for="mcq5a">A. Brahmagupta</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq5" value="B" id="mcq5b">
+                        <label for="mcq5b">B. Aryabhata</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq5" value="C" id="mcq5c">
+                        <label for="mcq5c">C. Bhaskara II</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="mcq5" value="D" id="mcq5d">
+                        <label for="mcq5d">D. Charaka</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="submitQuiz()" class="bg-blue-500 text-white py-2 px-4 rounded shadow-md hover:bg-blue-600">Submit</button>
+        </form>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 class="text-xl font-semibold mb-4">Quiz Results</h2>
+            <p id="modal-text">You scored <span id="score" class="font-bold">0</span> out of 20.</p>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            // Example scoring logic; should be replaced with actual logic
+            let score = 0;
+            const correctAnswers = {
+                q1: 'A', q2: 'C', q3: 'B', q4: 'D', q5: 'B', q6: 'D', q7: 'C', q8: 'A', q9: 'C', q10: 'A',
+                q11: 'B', q12: 'B', q13: 'A', q14: 'D', q15: 'B',
+                mcq1: ['A', 'C'], mcq2: ['A', 'C', 'D'], mcq3: ['A', 'B', 'D'], mcq4: ['A', 'C'], mcq5: ['A', 'B', 'C']
+            };
+
+            for (let i = 1; i <= 15; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const selectedOptions = Array.from(document.querySelectorAll(`input[name="mcq${i}"]:checked`)).map(input => input.value);
+                if (JSON.stringify(selectedOptions.sort()) === JSON.stringify(correctAnswers[`mcq${i}`].sort())) {
+                    score += 1; // or adjust score based on correctness
+                }
+            }
+
+            document.getElementById('score').textContent = score;
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Technology - Journey of Indian Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            z-index: 10;
+        }
+
+        .sidebar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: #2b6cb0;
+            transition: background 0.3s, color 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #e2e8f0;
+            color: #2b6cb0;
+            border-left: 4px solid #2b6cb0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-200 text-gray-800">
+    <header class="bg-blue-900 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold hover:text-yellow-300 transition-colors duration-300">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-red-500 transition-colors duration-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-500 transition-colors duration-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-green-500 transition-colors duration-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-blue-500 transition-colors duration-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-red-500 transition-colors duration-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-500 transition-colors duration-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-green-500 transition-colors duration-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 flex flex-col lg:flex-row gap-10">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/4 sidebar">
+            <h2 class="text-2xl font-semibold mb-4 px-4 py-2 border-b-2 border-blue-500">Ancient Technology</h2>
+            <ul class="space-y-2">
+                <li><a href="#introduction" class="sticky-link">Introduction</a></li>
+                <li><a href="#metallurgy" class="sticky-link">Metallurgy</a></li>
+                <li><a href="#mathematics" class="sticky-link">Mathematics</a></li>
+                <li><a href="#architecture" class="sticky-link">Architecture</a></li>
+                <li><a href="#notable-figures" class="sticky-link">Notable Figures</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="w-full lg:w-3/4 bg-white p-6 rounded-lg shadow-md">
+            <h1 class="text-4xl font-bold mb-6">Ancient Indian Technology</h1>
+            <p class="mb-6 text-lg leading-relaxed">India's ancient technology was groundbreaking in many areas, including metallurgy, mathematics, and architecture. The Indus Valley Civilization, for example, showcased advanced urban planning and sophisticated drainage systems.</p>
+
+            <div id="introduction" class="mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Introduction</h2>
+                <p class="text-lg mb-4 leading-relaxed">Ancient Indian civilization was characterized by its advanced knowledge in various fields. Technologies developed during this period significantly influenced not just the Indian subcontinent but also the wider world.</p>
+            </div>
+
+            <div id="metallurgy" class="mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Metallurgy</h2>
+                <p class="text-lg mb-4 leading-relaxed">Ancient Indian metallurgists excelled in metallurgy, particularly in producing high-quality steel. Wootz steel, known for its exceptional strength and durability, was a notable achievement. The Iron Pillar of Delhi, which remains rust-free after over a millennium, showcases the advanced ironworking skills of ancient India.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Delhi_Iron_Pillar.jpg/1024px-Delhi_Iron_Pillar.jpg" alt="Iron Pillar of Delhi" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Wootz_Steel_Plunger.jpg/1024px-Wootz_Steel_Plunger.jpg" alt="Wootz Steel Plunger" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <div id="mathematics" class="mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Mathematics</h2>
+                <p class="text-lg mb-4 leading-relaxed">Ancient Indian mathematicians made groundbreaking contributions, including the development of the decimal system and the concept of zero. Notable figures such as Aryabhata and Brahmagupta provided significant advancements in algebra, trigonometry, and arithmetic, which laid the foundation for modern mathematics.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Aryabhata%2C_Indian_mathematician.jpg/1024px-Aryabhata%2C_Indian_mathematician.jpg" alt="Aryabhata" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Brahmagupta%2C_Indian_Mathematician.jpg/1024px-Brahmagupta%2C_Indian_Mathematician.jpg" alt="Brahmagupta" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <div id="architecture" class="mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Architecture</h2>
+                <p class="text-lg mb-4 leading-relaxed">Ancient Indian architecture is renowned for its precision and grandeur. The construction of the Indus Valley cities demonstrated advanced urban planning, with well-planned streets and drainage systems. The temples and palaces of ancient India, such as the Brihadeeswarar Temple, exhibit sophisticated architectural techniques and artistic skills.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Brihadeeswarar_Temple.JPG/1024px-Brihadeeswarar_Temple.JPG" alt="Brihadeeswarar Temple" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Great_Bath_Indus_Valley.jpg/1024px-Great_Bath_Indus_Valley.jpg" alt="Great Bath of Mohenjo-Daro" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <div id="notable-figures" class="mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Notable Figures</h2>
+                <p class="text-lg mb-4 leading-relaxed">Several prominent figures made significant contributions to ancient Indian technology. Figures such as Aryabhata, who is known for his work in astronomy and mathematics, and Sushruta, known for his contributions to medicine and surgery, played crucial roles in advancing technology and knowledge.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sushruta_Samhita.jpg/1024px-Sushruta_Samhita.jpg" alt="Sushruta Samhita" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charaka_Samhita_%28Cover%29.jpg/1024px-Charaka_Samhita_%28Cover%29.jpg" alt="Charaka Samhita" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Journey of Indian Technology</h3>
+            <p class="text-lg">Follow the path of innovation through the ages, and see what the future holds for technology in India.</p>
+            <ul class="flex justify-center space-x-6 mt-4">
+                <li><a href="#" class="text-2xl hover:text-red-500 transition-colors duration-300"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-red-500 transition-colors duration-300"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-red-500 transition-colors duration-300"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="text-2xl hover:text-red-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <p class="mt-6">&copy; 2024 Journey of Indian Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

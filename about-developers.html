@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Developers - TechJourney</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #0f0f0f;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        header {
+            background: #000;
+            border-bottom: 2px solid #00ff00;
+        }
+        .neon-text {
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff00;
+        }
+        .social-links a {
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .social-links a:hover {
+            color: #ff0000;
+        }
+        .content-section {
+            border: 1px solid #00ff00;
+        }
+        .hacking-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .hacking-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .hacking-content pre {
+            white-space: pre-wrap;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="bg-black text-green-400">
+
+    <header class="bg-black text-green-400 py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold neon-text">TechJourney</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="ancient-tech.html" class="hover:text-yellow-300">Ancient</a></li>
+                <li><a href="medieval-tech.html" class="hover:text-yellow-300">Medieval</a></li>
+                <li><a href="present-tech.html" class="hover:text-yellow-300">Present</a></li>
+                <li><a href="future-tech.html" class="hover:text-yellow-300">Future</a></li>
+                <li><a href="quiz.html" class="hover:text-yellow-300">Quiz</a></li>
+                <li><a href="about-developers.html" class="hover:text-yellow-300">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-10 px-4">
+        <h1 class="text-5xl font-bold mb-6 neon-text text-center">Meet the Developers</h1>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="card p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="Developer 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                <h2 class="text-3xl font-bold mb-2 neon-text">Alex Johnson</h2>
+                <p class="text-lg mb-4">Lead Developer. Expert in front-end technologies and UX/UI design. Passionate about creating intuitive user experiences.</p>
+                <div class="social-links">
+                    <a href="#" class="mr-4"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="card p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="Developer 2" class="w-full h-32 object-cover rounded-lg mb-4">
+                <h2 class="text-3xl font-bold mb-2 neon-text">Jamie Smith</h2>
+                <p class="text-lg mb-4">Backend Specialist. Focused on server-side technologies and database management. Adept at optimizing application performance.</p>
+                <div class="social-links">
+                    <a href="#" class="mr-4"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="card p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="Developer 3" class="w-full h-32 object-cover rounded-lg mb-4">
+                <h2 class="text-3xl font-bold mb-2 neon-text">Sam Taylor</h2>
+                <p class="text-lg mb-4">Full-Stack Developer. Skilled in both front-end and back-end development. Enjoys solving complex technical challenges.</p>
+                <div class="social-links">
+                    <a href="#" class="mr-4"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <div class="text-center mt-8">
+            <button id="start-hacking" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">Start Hacking</button>
+        </div>
+    </main>
+
+    <footer class="bg-black text-green-400 py-6 mt-10 text-center">
+        <p>&copy; 2024 TechJourney. All Rights Reserved.</p>
+    </footer>
+
+    <div id="hacking-screen" class="hacking-screen">
+        <div class="hacking-content">
+            <h2 class="text-4xl font-bold neon-text mb-4">Hacking in Progress...</h2>
+            <pre id="hacking-output">
+                /* Fake hacking output */
+                [*] Connecting to server...
+                [*] Server response: OK
+                [*] Running diagnostic checks...
+                [*] Loading user profiles...
+                [*] Accessing database...
+                [*] Data encryption in progress...
+                [*] Hacking attempt detected! 
+                [*] Please wait...
+            </pre>
+            <button id="stop-hacking" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition mt-4">Stop Hacking</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('start-hacking').addEventListener('click', function() {
+            document.getElementById('hacking-screen').style.display = 'flex';
+            startHackingAnimation();
+        });
+
+        document.getElementById('stop-hacking').addEventListener('click', function() {
+            stopHackingAnimation();
+            document.getElementById('hacking-screen').style.display = 'none';
+        });
+
+        function startHackingAnimation() {
+            let output = document.getElementById('hacking-output');
+            let text = `
+                /* Fake hacking output */
+                [*] Connecting to server...
+                [*] Server response: OK
+                [*] Running diagnostic checks...
+                [*] Loading user profiles...
+                [*] Accessing database...
+                [*] Data encryption in progress...
+                [*] Hacking attempt detected! 
+                [*] Please wait...
+            `;
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    output.textContent += text[index++];
+                    setTimeout(type, 25);  // Speed up typing by reducing timeout
+                }
+            }
+            type();
+        }
+
+        function stopHackingAnimation() {
+            let output = document.getElementById('hacking-output');
+            output.textContent = '';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                stopHackingAnimation();
+                document.getElementById('hacking-screen').style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
